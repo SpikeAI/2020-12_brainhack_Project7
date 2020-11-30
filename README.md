@@ -17,7 +17,9 @@ simulation & (3) analyzing the results.
 We wish to go beyond the classical strategy ("yet another model") but to understand "why" such a given network would be a good descriptor of neural computations (for a context, see https://arxiv.org/ftp/arxiv/papers/2004/2004.07580.pdf ). With such an efficient simulation pipeline, we would like in the future to "close the loop" and explore the space of all network  configurations, in normal as well as pathological conditions.
  
 https://github.com/NeuralEnsemble/PyNN
+
 https://github.com/nest/nest-simulator
+
 http://spinnakermanchester.github.io/
 
 **Goals for Brainhack Marseille**
