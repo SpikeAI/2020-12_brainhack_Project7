@@ -1,4 +1,4 @@
-# 2020-11_brainhack_Project7
+# OpSNN : Optimized Pipeline for Spiking Neural Networks
 
 ## Project info
 
