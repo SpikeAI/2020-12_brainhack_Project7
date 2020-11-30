@@ -6,6 +6,7 @@
 Optimized Pipeline for the modelling of Spiking Neural Networks (SNNs)
 
 **Project lead and collaborators:**
+
 Lead: Alberto Vergani @albertovergani
 
 Lead: Laurent Perrinet @laurentperrinet
