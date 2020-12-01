@@ -1,4 +1,4 @@
-# 2020-11_brainhack_Project7
+# OpSNN : Optimized Pipeline for Spiking Neural Networks
 
 ## Project info
 
@@ -6,9 +6,12 @@
 Optimized Pipeline for the modelling of Spiking Neural Networks (SNNs)
 
 **Project lead and collaborators:**
-Lead: Alberto Vergani @albertovergani
-Lead: Laurent Perrinet @laurentperrinet
-Collaborator: Julia Sprenger @juliasprenger
+
+Lead: Alberto Vergani [@albertovergani](https://github.com/albertovergani)
+
+Lead: Laurent Perrinet [@laurentperrinet](https://github.com/laurentperrinet)
+
+Collaborator: Julia Sprenger [@juliasprenger](https://github.com/juliasprenger)
 
 **Description:**
 We are doing Spiking Neural Networks of the primary visual cortex designed to help us better understand visual computations using Spatio-temporal Diffusion Kernels and Traveling Waves. We are using neural simulators using classical pipelines (pyNN AND (Nest OR SpiNNaker) ), but for which we wish to optimize the different steps: (1) setting up the network, (2) running the

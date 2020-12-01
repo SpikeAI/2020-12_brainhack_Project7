@@ -1,0 +1,6 @@
+application_generated_data_files
+.gitignore-checkpoint
+.ipynb-checkpoint
+outputs
+reports
+*pyc
