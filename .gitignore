@@ -1,6 +1,8 @@
 application_generated_data_files
 .gitignore-checkpoint
-.ipynb-checkpoint
+.ipynb-checkpoints
 outputs
 reports
 *pyc
+dev/.ipynb_checkpoints/
+dev/Results/
