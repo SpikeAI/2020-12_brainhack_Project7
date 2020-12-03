@@ -9,3 +9,5 @@ dev/Results/
 VisionSNN/.ipynb_checkpoints/probabilistic_2D_bump_attractor-checkpoint.py
 input/output/
 input/.ipynb_checkpoints
+*h5
+*pkl
