@@ -154,6 +154,7 @@ class Bump2D():
                             prob = np.exp(-d**(1/par))
                             p.append(prob)
                             delayFun = round(self.args.min_delay + (scalePar*d)/waveVelocity, 2)
+                            delayFun = np.min((delayFun, self.args.max_delay-1))
                             if prob > np.random.random():
                                 connList = connList + [(i, j, weightFun, delayFun)]
 
@@ -164,6 +165,7 @@ class Bump2D():
                         for i in range(pop1):
                             d = abs(i-i)
                             delayFun = round(self.args.min_delay + (scalePar*d)/waveVelocity, 2)
+                            delayFun = np.min((delayFun, self.args.max_delay-1))
                             connList = connList + [(i, i, round(weightFun,3), delayFun)]
 
                     if connType == 'oneTOoneDelay30ms':
@@ -183,6 +185,7 @@ class Bump2D():
                                 By = j % int(np.sqrt(pop2))
                                 d = np.sqrt((Ax - Bx)**2 + (Ay - By)**2) #abs(i-j)
                                 delayFun = round(self.args.min_delay + (scalePar*d)/waveVelocity, 2)
+                                delayFun = np.min((delayFun, self.args.max_delay-1))
                                 if d <= delta:
                                     connList = connList + [(i, j, weightFun, delayFun)]
 
@@ -195,6 +198,7 @@ class Bump2D():
                                 By = j % int(np.sqrt(pop2))
                                 d = np.sqrt((Ax - Bx)**2 + (Ay - By)**2) #abs(i-j)
                                 delayFun = round(self.args.min_delay + (scalePar*d)/waveVelocity, 2)
+                                delayFun = np.min((delayFun, self.args.max_delay-1))
                                 connList = connList + [(i, j, weightFun, delayFun)]
 
                     if connType == 'uniform':
@@ -209,6 +213,7 @@ class Bump2D():
                                 prob = np.random.uniform(0,1)
                                 p.append(prob)
                                 delayFun = round(self.args.min_delay + (scalePar*d)/waveVelocity, 2)
+                                delayFun = np.min((delayFun, self.args.max_delay-1))
                                 if prob > 0.50:
                                     connList = connList + [(i, j, weightFun, delayFun)]
 

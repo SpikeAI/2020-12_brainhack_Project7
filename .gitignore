@@ -6,9 +6,12 @@ reports
 *pyc
 dev/.ipynb_checkpoints/
 dev/Results/
-VisionSNN/.ipynb_checkpoints/probabilistic_2D_bump_attractor-checkpoint.py
+VisionSNN/.ipynb_checkpoints/
 input/output/*png
 input/.ipynb_checkpoints
 *h5
 *pkl
-input/data/
+input/data_ncars
+input/data_nmnist
+benchmark/.ipynb_checkpoints/
+benchmark/VisionSNN/.ipynb_checkpoints/probabilistic_2D_bump_attractor-checkpoint.py
