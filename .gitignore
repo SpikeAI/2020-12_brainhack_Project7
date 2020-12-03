@@ -11,3 +11,4 @@ input/output/
 input/.ipynb_checkpoints
 *h5
 *pkl
+input/data/
