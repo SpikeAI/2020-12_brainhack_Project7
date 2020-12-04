@@ -5,6 +5,7 @@ outputs
 reports
 *pyc
 output/.ipynb_checkpoints/
+output/dev/.ipynb_checkpoints/
 output/Results/
 VisionSNN/.ipynb_checkpoints/
 input/output/*png
