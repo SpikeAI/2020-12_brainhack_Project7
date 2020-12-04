@@ -100,7 +100,6 @@ we have now the possibility to import tonic datasets into pyNN:
 
 check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
-
 ### benchmark
 using
 
@@ -111,7 +110,6 @@ using
 
 we get the following results
 
-
 nest   | spinnaker
 ------ | ------
 ![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)   | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
@@ -120,7 +118,6 @@ nest   | spinnaker
 
 #### on nest:
 
-
 ```
 buildCPUTime (ms) = 0.583 * N_pop + 0.016/1000 * simtime (ms) * N_pop
 simCPUTime (ms) = -0.007 * N_pop + 2.841/1000 * simtime (ms) * N_pop
@@ -128,7 +125,6 @@ writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
 
 ```
 #### on spinnaker:
-
 
 ```
 (not finished at this time !)
