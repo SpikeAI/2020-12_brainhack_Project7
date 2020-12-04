@@ -54,36 +54,6 @@ We investigated different existing solutions / efforts in that direction :
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
 
---- Vogels-Abbott Network Simulation ---
-
-neo==0.9.0 | nest | nixio | 400 neurons
-
-Nodes                  : 1
-Number of Neurons      : 400
-Number of Synapses     : 1320 e→e,i  372 i→e,i
-Excitatory conductance : 4 nS
-Inhibitory conductance : 51 nS
-Excitatory rate        : 0.134375 Hz
-Inhibitory rate        : 0.15 Hz
-Build time             : 2.72644 s
-Simulation time        : 1.84852 s
-Writing time           : 12.3382 s
-
-neo==0.9.0 | nest | pkl | 400 neurons
-
-Nodes                  : 1
-Number of Neurons      : 4000
-Number of Synapses     : 128066 e→e,i  32011 i→e,i
-Excitatory conductance : 4 nS
-Inhibitory conductance : 51 nS
-Excitatory rate        : 23.1569 Hz
-Inhibitory rate        : 21.765 Hz
-Build time             : 9.64068 s
-Simulation time        : 11.8327 s
-Writing time           : 0.97302 s
-
-soon also picture...
-
 ### input
 
 we have now the possibility to import tonic datasets into pyNN:
