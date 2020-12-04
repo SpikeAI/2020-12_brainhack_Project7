@@ -88,6 +88,8 @@ Writing time           : 212.847 s
 The writing time regards the saving of spikes for 1000 cells, but voltage for two cells (i.e., [0] and [1])
 
 #### voltage comparison between pkl and nixio format
+Overlapped since identical results
+
 ![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparisonEqual.png)
 
 check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
@@ -96,7 +98,7 @@ check extended results (spikes and voltage) here https://github.com/SpikeAI/2020
 
 we have now the possibility to import tonic datasets into pyNN:
 
-<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/test_stop.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"> | <img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/output_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"> | <img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">  
+<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
 
 check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
@@ -125,6 +127,9 @@ writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
 
 ```
 #### on spinnaker:
+
+![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)
+![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)
 
 ```
 (not finished at this time !)
