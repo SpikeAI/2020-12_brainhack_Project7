@@ -117,13 +117,11 @@ using
 
 we get the following results
 
-nest   | spinnaker
------- | ------
-![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png) | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
-![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png) | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
-
 
 #### on nest:
+population   | simtim
+------ | ------
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png) | ![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)
 
 ```
 buildCPUTime (ms) = 0.583 * N_pop + 0.016/1000 * simtime (ms) * N_pop
@@ -133,6 +131,11 @@ writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
 ```
 #### on spinnaker:
 
+population   | simtim
+------ | ------
+
+![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
+| ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
 
 ```
 (not finished at this time !)
