@@ -13,7 +13,7 @@ Lead: Laurent Perrinet [@laurentperrinet](https://github.com/laurentperrinet)
 
 Collaborator: Julia Sprenger [@juliasprenger](https://github.com/juliasprenger)
 
-**Description:**
+## Description
 We are doing Spiking Neural Networks of the primary visual cortex designed to help us better understand visual computations using Spatio-temporal Diffusion Kernels and Traveling Waves. We are using neural simulators using classical pipelines (pyNN AND (Nest OR SpiNNaker) ), but for which we wish to optimize the different steps: (1) setting up the network, (2) running the
 simulation & (3) analyzing the results.
 
@@ -29,7 +29,7 @@ Links of interest:
 
 * to create an account and run your simulation on a **real** Spinnaker board, sign in @ https://spinn-20.cs.man.ac.uk/hub/login
 
-**Goals for Brainhack Marseille**
+## Goals for Brainhack Marseille
 - working goals: handle the interface between simulations blocks (network building, running simulations, results analysis)
 - perspective goal: thinking about closing the loop by optimizing the network structure based on the output of the analysis.
 
@@ -42,4 +42,19 @@ PyNN 40%
 ![brainhack2020_2](https://user-images.githubusercontent.com/17125783/100328549-ee226f00-2fcc-11eb-84fd-8965dc9a6417.png)
 
 
-**Wrap-up:**
+## Wrap-up:
+
+### output
+
+we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
+
+### input
+
+we have now the possibility to import tonic datasets into pyNN:
+
+![output spikes](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true)
+
+check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
+
+
+### benchmark
