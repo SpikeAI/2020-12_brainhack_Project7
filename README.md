@@ -119,8 +119,8 @@ we get the following results
 
 nest   | spinnaker
 ------ | ------
-![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)   | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
-![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)   | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png) | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
+![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png) | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
 
 
 #### on nest:
