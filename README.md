@@ -48,6 +48,9 @@ We investigated different existing solutions / efforts in that direction :
 
  * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developped now, py3 now supported)
  * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
+   * compare Neo pickle vs Neo-Nix as interchange file formats
+     * pickle: faster saving time, smaller file sizes, requires identical environment for reading
+     * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
 
 
 ### output
@@ -56,7 +59,7 @@ we tested different backends for writing files, while keeping neo files (and thu
 
 For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
 
-#### pkl format 
+#### pkl format
 
 Nodes                  : 1
 Number of Neurons      : 1000
@@ -79,7 +82,7 @@ Build time             : 0.00556111 s
 Simulation time        : 66.1884 s
 **Writing time           : 212.847 s**
 
-#### voltage comparison between pkl and nixio format 
+#### voltage comparison between pkl and nixio format
 ![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
 
 check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
