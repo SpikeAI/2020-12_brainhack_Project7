@@ -88,7 +88,7 @@ Writing time           : 212.847 s
 The writing time regards the saving of spikes for 1000 cells, but voltage for two cells (i.e., [0] and [1])
 
 #### voltage comparison between pkl and nixio format
-![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
+![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparisonEqual.png)
 
 check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
 
