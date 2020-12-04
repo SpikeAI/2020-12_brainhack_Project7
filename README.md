@@ -64,6 +64,12 @@ check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/
 
 
 ### benchmark
+using
 
-![2020-12-04_scan_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_N_pop.png)
-![2020-12-04_scan_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_simtime.png)
+  N_pop=1000,  # number of cells
+  simtime=1000, # (ms) simulaton duration
+
+we get the following results on nest:
+
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop)
+![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest__simtime.png)
