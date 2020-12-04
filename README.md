@@ -42,13 +42,13 @@ PyNN 40%
 ![brainhack2020_2](https://user-images.githubusercontent.com/17125783/100328549-ee226f00-2fcc-11eb-84fd-8965dc9a6417.png)
 
 
-## Wrap-up:
+## Wrap-up of results:
 
-We investigated different existing solutions / efforts in that direction :
+We first investigated existing solutions / efforts in that direction :
 
- * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developped now, py3 now supported)
+ * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developed now, py3 now supported)
  * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
-   * compare Neo pickle vs Neo-Nix as interchange file formats
+   * in particular, we compared Neo pickle vs Neo-Nix as interchange file formats
      * pickle: faster saving time, smaller file sizes, requires identical environment for reading
      * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
 
