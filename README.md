@@ -69,7 +69,7 @@ Excitatory rate        : 0.84 Hz
 Inhibitory rate        : 0.73 Hz
 Build time             : 0.00574541 s
 Simulation time        : 68.6002 s
-Writing time           : 0.246068
+Writing time           : 0.246068 s
 ```
 
 #### nixio format
