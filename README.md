@@ -44,6 +44,12 @@ PyNN 40%
 
 ## Wrap-up:
 
+We investigated different existing solutions / efforts in that direction :
+
+ * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developped now, py3 now supported)
+ * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
+
+
 ### output
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
@@ -52,9 +58,12 @@ we tested different backends for writing files, while keeping neo files (and thu
 
 we have now the possibility to import tonic datasets into pyNN:
 
-![output spikes](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true)
+<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
 
 check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
 
 ### benchmark
+
+![2020-12-04_scan_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_N_pop.png)
+![2020-12-04_scan_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_simtime.png)
