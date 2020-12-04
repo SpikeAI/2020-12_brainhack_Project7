@@ -53,11 +53,14 @@ We investigated different existing solutions / efforts in that direction :
      * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
 
 
+
 ### output
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
 
 For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
+
+* 1 PR : https://github.com/NeuralEnsemble/PyNN/pull/695
 
 #### pkl format
 ```
@@ -101,6 +104,8 @@ we have now the possibility to import tonic datasets into pyNN:
 <img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/test_stop.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/input_movie.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/output_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
 
 check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
+
+* 1 PR : https://github.com/neuromorphs/tonic/pull/89
 
 ### benchmark
 using
