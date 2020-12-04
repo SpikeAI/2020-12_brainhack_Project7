@@ -48,11 +48,49 @@ We investigated different existing solutions / efforts in that direction :
 
  * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developped now, py3 now supported)
  * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
+   * compare Neo pickle vs Neo-Nix as interchange file formats
+     * pickle: faster saving time, smaller file sizes, requires identical environment for reading
+     * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
 
 
 ### output
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
+
+For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
+
+#### pkl format
+```
+Nodes                  : 1
+Number of Neurons      : 1000
+Excitatory conductance : 4 nS
+Inhibitory conductance : 51 nS
+Excitatory rate        : 0.84 Hz
+Inhibitory rate        : 0.73 Hz
+Build time             : 0.00574541 s
+Simulation time        : 68.6002 s
+Writing time           : 0.246068 s
+```
+
+#### nixio format
+```
+Nodes                  : 1
+Number of Neurons      : 1000
+Excitatory conductance : 4 nS
+Inhibitory conductance : 51 nS
+Excitatory rate        : 1.07875 Hz
+Inhibitory rate        : 1.095 Hz
+Build time             : 0.00556111 s
+Simulation time        : 66.1884 s
+Writing time           : 212.847 s
+```
+
+The writing time regards the saving of spikes for 1000 cells, but voltage for two cells (i.e., [0] and [1])
+
+#### voltage comparison between pkl and nixio format
+![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
+
+check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
 
 ### input
 
@@ -66,10 +104,37 @@ check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/
 ### benchmark
 using
 
+```
   N_pop=1000,  # number of cells
   simtime=1000, # (ms) simulaton duration
+```
 
-we get the following results on nest:
+we get the following results
 
-![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop)
-![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest__simtime.png)
+#### on nest:
+
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)
+![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)
+
+```
+buildCPUTime (ms) = 0.583 * N_pop + 0.016/1000 * simtime (ms) * N_pop
+simCPUTime (ms) = -0.007 * N_pop + 2.841/1000 * simtime (ms) * N_pop
+writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
+
+```
+#### on spinnaker:
+
+![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)
+![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)
+
+```
+(not finished at this time !)
+
+```
+
+
+nest   | spinnaker
+------ | ------
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)   | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
+------ | ------
+![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)   | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  

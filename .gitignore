@@ -4,8 +4,9 @@ application_generated_data_files
 outputs
 reports
 *pyc
-dev/.ipynb_checkpoints/
-dev/Results/
+output/.ipynb_checkpoints/
+output/dev/.ipynb_checkpoints/
+output/Results/
 VisionSNN/.ipynb_checkpoints/
 input/output/*png
 input/.ipynb_checkpoints
@@ -15,3 +16,4 @@ input/data_ncars
 input/data_nmnist
 benchmark/.ipynb_checkpoints/
 benchmark/VisionSNN/.ipynb_checkpoints/probabilistic_2D_bump_attractor-checkpoint.py
+benchmark/dev/.ipynb_checkpoints/2020-11-13_running-time-checkpoint.ipynb
