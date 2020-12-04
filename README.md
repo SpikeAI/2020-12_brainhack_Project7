@@ -54,6 +54,36 @@ We investigated different existing solutions / efforts in that direction :
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
 
+For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
+
+#### pkl format 
+
+Nodes                  : 1
+Number of Neurons      : 1000
+Excitatory conductance : 4 nS
+Inhibitory conductance : 51 nS
+Excitatory rate        : 0.84 Hz
+Inhibitory rate        : 0.73 Hz
+Build time             : 0.00574541 s
+Simulation time        : 68.6002 s
+**Writing time           : 0.246068**
+
+#### nixio format
+Nodes                  : 1
+Number of Neurons      : 1000
+Excitatory conductance : 4 nS
+Inhibitory conductance : 51 nS
+Excitatory rate        : 1.07875 Hz
+Inhibitory rate        : 1.095 Hz
+Build time             : 0.00556111 s
+Simulation time        : 66.1884 s
+**Writing time           : 212.847 s**
+
+#### voltage comparison between pkl and nixio format 
+![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
+
+check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
+
 ### input
 
 we have now the possibility to import tonic datasets into pyNN:
