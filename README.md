@@ -66,7 +66,7 @@ Excitatory rate        : 0.84 Hz
 Inhibitory rate        : 0.73 Hz
 Build time             : 0.00574541 s
 Simulation time        : 68.6002 s
-Writing time           : 0.246068 
+**Writing time           : 0.246068**
 
 #### nixio format
 Nodes                  : 1
@@ -77,7 +77,7 @@ Excitatory rate        : 1.07875 Hz
 Inhibitory rate        : 1.095 Hz
 Build time             : 0.00556111 s
 Simulation time        : 66.1884 s
-Writing time           : 212.847 s
+**Writing time           : 212.847 s**
 
 #### voltage comparison between pkl and nixio format 
 ![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
