@@ -4,8 +4,8 @@ application_generated_data_files
 outputs
 reports
 *pyc
-dev/.ipynb_checkpoints/
-dev/Results/
+output/.ipynb_checkpoints/
+output/Results/
 VisionSNN/.ipynb_checkpoints/
 input/output/*png
 input/.ipynb_checkpoints
