@@ -40,3 +40,6 @@ PyNN 40%
 
 **Striking Image**
 ![brainhack2020_2](https://user-images.githubusercontent.com/17125783/100328549-ee226f00-2fcc-11eb-84fd-8965dc9a6417.png)
+
+
+**Wrap-up:**
