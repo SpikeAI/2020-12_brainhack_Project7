@@ -57,7 +57,7 @@ we tested different backends for writing files, while keeping neo files (and thu
 For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
 
 #### pkl format 
-
+```
 Nodes                  : 1
 Number of Neurons      : 1000
 Excitatory conductance : 4 nS
@@ -66,9 +66,11 @@ Excitatory rate        : 0.84 Hz
 Inhibitory rate        : 0.73 Hz
 Build time             : 0.00574541 s
 Simulation time        : 68.6002 s
-**Writing time           : 0.246068**
+Writing time           : 0.246068
+```
 
 #### nixio format
+```
 Nodes                  : 1
 Number of Neurons      : 1000
 Excitatory conductance : 4 nS
@@ -77,7 +79,8 @@ Excitatory rate        : 1.07875 Hz
 Inhibitory rate        : 1.095 Hz
 Build time             : 0.00556111 s
 Simulation time        : 66.1884 s
-**Writing time           : 212.847 s**
+Writing time           : 212.847 s
+```
 
 The writing time regards the saving of spikes for 1000 cells, but voltage for two cells (i.e., [0] and [1])
 
