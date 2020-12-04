@@ -79,6 +79,8 @@ Build time             : 0.00556111 s
 Simulation time        : 66.1884 s
 **Writing time           : 212.847 s**
 
+The writing time regards the saving of spikes for 1000 cells, but voltage for two cells (i.e., [0] and [1])
+
 #### voltage comparison between pkl and nixio format 
 ![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
 
