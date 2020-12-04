@@ -53,11 +53,14 @@ We investigated different existing solutions / efforts in that direction :
      * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
 
 
+
 ### output
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
 
 For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
+
+* 1 PR : https://github.com/NeuralEnsemble/PyNN/pull/695
 
 #### pkl format
 ```
@@ -69,7 +72,7 @@ Excitatory rate        : 0.84 Hz
 Inhibitory rate        : 0.73 Hz
 Build time             : 0.00574541 s
 Simulation time        : 68.6002 s
-Writing time           : 0.246068
+Writing time           : 0.246068 s
 ```
 
 #### nixio format
@@ -88,7 +91,9 @@ Writing time           : 212.847 s
 The writing time regards the saving of spikes for 1000 cells, but voltage for two cells (i.e., [0] and [1])
 
 #### voltage comparison between pkl and nixio format
-![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparison.png)
+Overlapped since identical results
+
+![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparisonEqual.png)
 
 check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
 
@@ -96,10 +101,11 @@ check extended results (spikes and voltage) here https://github.com/SpikeAI/2020
 
 we have now the possibility to import tonic datasets into pyNN:
 
-<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
+<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/test_stop.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/input_movie.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/output_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
 
 check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
+* 1 PR : https://github.com/neuromorphs/tonic/pull/89
 
 ### benchmark
 using
@@ -111,10 +117,13 @@ using
 
 we get the following results
 
-#### on nest:
+nest   | spinnaker
+------ | ------
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)   | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
+![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)   | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
 
-![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)
-![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)
+
+#### on nest:
 
 ```
 buildCPUTime (ms) = 0.583 * N_pop + 0.016/1000 * simtime (ms) * N_pop
@@ -124,12 +133,8 @@ writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
 ```
 #### on spinnaker:
 
-![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)
-![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)
 
 ```
-buildCPUTime (ms) = 0.583 * N_pop + 0.016/1000 * simtime (ms) * N_pop
-simCPUTime (ms) = -0.007 * N_pop + 2.841/1000 * simtime (ms) * N_pop
-writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
+(not finished at this time !)
 
 ```
