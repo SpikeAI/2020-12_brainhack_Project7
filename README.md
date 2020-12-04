@@ -98,7 +98,7 @@ check extended results (spikes and voltage) here https://github.com/SpikeAI/2020
 
 we have now the possibility to import tonic datasets into pyNN:
 
-<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
+<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/test_stop.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/input_movie.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/output_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
 
 check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
