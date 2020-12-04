@@ -48,10 +48,6 @@ We first investigated existing solutions / efforts in that direction :
 
  * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developed now, py3 now supported)
  * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
-   * in particular, we compared Neo pickle vs Neo-Nix as interchange file formats
-     * pickle: faster saving time, smaller file sizes, requires identical environment for reading
-     * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
-
 
 
 ### output
@@ -96,6 +92,13 @@ Overlapped since identical results
 ![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparisonEqual.png)
 
 check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
+
+#### summary
+
+* in summary, we compared Neo pickle vs Neo-Nix as interchange file formats
+  * pickle: faster saving time, smaller file sizes, requires identical environment for reading
+  * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
+
 
 ### input
 
