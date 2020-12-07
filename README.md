@@ -48,7 +48,7 @@ We first investigated existing solutions / efforts in that direction :
 
  * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developed now, py3 now supported)
  * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
-
+ * comparing Nest and spinnaker : these are different simulators on different hardware which are comparable in some aspects (for instance see https://www.frontiersin.org/articles/10.3389/fnins.2018.00291 : "At this setting, NEST and SpiNNaker have a comparable energy consumption per synaptic event."), yet the later being a neuromorphic hardware (for which differential equations governing the dynamics of the neurons are actually implemented in the electronics of the chips, not numerically), it may scale up better in some situations.
 
 ### output
 
