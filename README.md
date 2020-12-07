@@ -121,7 +121,7 @@ using
 we get the following results
 
 
-#### on nest:
+#### on nest with hdf5:
 population size | bio simtime
 ------ | ------
 ![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png) | ![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)
@@ -132,6 +132,16 @@ simCPUTime (ms) = -0.007 * N_pop + 2.841/1000 * simtime (ms) * N_pop
 writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
 
 ```
+
+
+#### on nest with nixio:
+```
+buildCPUTime (ms) = 0.588 * N_pop + 0.017 * simtime (ms) * N_pop/1000
+simCPUTime (ms) = 0.047 * N_pop + 3.139 * simtime (ms) * N_pop/1000
+writeCPUTime (ms) = 19.241 * N_pop + 0.134 * simtime (ms) * N_pop/1000
+```
+
+
 #### on spinnaker:
 
 population size | bio simtime
@@ -139,6 +149,7 @@ population size | bio simtime
 ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
 
 ```
-(not finished at this time !)
-
+buildCPUTime (ms) = 0.002 * N_pop + 0.000/1000 * simtime (ms) * N_pop
+simCPUTime (ms) = 24.476 * N_pop + 6.483/1000 * simtime (ms) * N_pop
+writeCPUTime (ms) = 0.253 * N_pop + 0.186/1000 * simtime (ms) * N_pop
 ```
