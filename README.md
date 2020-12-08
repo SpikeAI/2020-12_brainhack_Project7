@@ -42,23 +42,19 @@ PyNN 40%
 ![brainhack2020_2](https://user-images.githubusercontent.com/17125783/100328549-ee226f00-2fcc-11eb-84fd-8965dc9a6417.png)
 
 
-## Wrap-up:
+## Wrap-up of results:
 
-We investigated different existing solutions / efforts in that direction :
+We first investigated existing solutions / efforts in that direction :
 
- * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developped now, py3 now supported)
+ * a full simulation pipeline = http://neuralensemble.org/docs/mozaik/index.html (not actively developed now, py3 now supported)
  * NEO = *the* interchange format: https://neo.readthedocs.io/en/latest/index.html for simulations and experiments
-   * compare Neo pickle vs Neo-Nix as interchange file formats
-     * pickle: faster saving time, smaller file sizes, requires identical environment for reading
-     * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
-
-
+ * comparing Nest and spinnaker : these are different simulators on different hardware which are comparable in some aspects (for instance see https://www.frontiersin.org/articles/10.3389/fnins.2018.00291 : "At this setting, NEST and SpiNNaker have a comparable energy consumption per synaptic event."), yet the later being a neuromorphic hardware (for which differential equations governing the dynamics of the neurons are actually implemented in the electronics of the chips, not numerically), it may scale up better in some situations.
 
 ### output
 
 we tested different backends for writing files, while keeping neo files (and thus the same plotting functions).
 
-For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
+For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
 
 * 1 PR : https://github.com/NeuralEnsemble/PyNN/pull/695
 
@@ -93,17 +89,24 @@ The writing time regards the saving of spikes for 1000 cells, but voltage for tw
 #### voltage comparison between pkl and nixio format
 Overlapped since identical results
 
-![brainhack2020_comparison](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/comparisonEqual.png)
+![brainhack2020_comparison](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/output/comparisonEqual.png)
 
-check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
+check extended results (spikes and voltage) here https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/output/3_C_loading_inputs.ipynb
+
+#### summary
+
+* in summary, we compared Neo pickle vs Neo-Nix as interchange file formats
+  * pickle: faster saving time, smaller file sizes, requires identical environment for reading
+  * nix: slower in saving, larger file sizes, interoperable hdf5 file, less dependent on package versions (see also update on https://github.com/NeuralEnsemble/python-neo/issues/310)
+
 
 ### input
 
 we have now the possibility to import tonic datasets into pyNN:
 
-<img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/test_stop.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/input_movie.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/output_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
+<img src="https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/input/output/test_stop.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/input/output/input_movie.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/input/output/output_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px"><img src="https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/input/output/nmnist_spike.gif?raw=true" alt="output spikes" class="bg-primary" width="200px">
 
-check out https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
+check out https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
 * 1 PR : https://github.com/neuromorphs/tonic/pull/89
 
@@ -117,13 +120,11 @@ using
 
 we get the following results
 
-nest   | spinnaker
+
+#### on nest with hdf5:
+population size | bio simtime
 ------ | ------
-![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png)   | ![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  
-![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)   | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-11_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
-
-
-#### on nest:
+![2020-12-04_scan_nest__N_pop](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_N_pop.png) | ![2020-12-04_scan_nest__simtime](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_nest_simtime.png)
 
 ```
 buildCPUTime (ms) = 0.583 * N_pop + 0.016/1000 * simtime (ms) * N_pop
@@ -131,10 +132,24 @@ simCPUTime (ms) = -0.007 * N_pop + 2.841/1000 * simtime (ms) * N_pop
 writeCPUTime (ms) = 0.202 * N_pop + 0.035/1000 * simtime (ms) * N_pop
 
 ```
+
+
+#### on nest with nixio:
+```
+buildCPUTime (ms) = 0.588 * N_pop + 0.017 * simtime (ms) * N_pop/1000
+simCPUTime (ms) = 0.047 * N_pop + 3.139 * simtime (ms) * N_pop/1000
+writeCPUTime (ms) = 19.241 * N_pop + 0.134 * simtime (ms) * N_pop/1000
+```
+
+
 #### on spinnaker:
 
+population size | bio simtime
+------ | ------
+![2020-12-04_scan_spinnaker_N_pop](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_N_pop.png)  | ![2020-12-04_scan_spinnaker_simtime](https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/benchmark/2020-12-04_scan_spinnaker_simtime.png)  
 
 ```
-(not finished at this time !)
-
+buildCPUTime (ms) = 0.002 * N_pop + 0.000/1000 * simtime (ms) * N_pop
+simCPUTime (ms) = 24.476 * N_pop + 6.483/1000 * simtime (ms) * N_pop
+writeCPUTime (ms) = 0.253 * N_pop + 0.186/1000 * simtime (ms) * N_pop
 ```
