@@ -56,7 +56,7 @@ we tested different backends for writing files, while keeping neo files (and thu
 
 For the testing, we run simulations on SpiNNaker with 1000 cells (https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/output/3_boilerplate.ipynb) obtaining:
 
-* 1 PR : https://github.com/NeuralEnsemble/PyNN/pull/695
+* 1 PR : https://github.com/NeuralEnsemble/PyNN/pull/695 (merged! :bowtie: )
 
 #### pkl format
 ```
@@ -108,7 +108,7 @@ we have now the possibility to import tonic datasets into pyNN:
 
 check out https://github.com/SpikeAI/2020-12_brainhack_Project7/blob/main/input/D_tonic2SpikeSourceArray.ipynb
 
-* 1 PR : https://github.com/neuromorphs/tonic/pull/89
+* 1 PR : https://github.com/neuromorphs/tonic/pull/89 (merged! :bowtie: )
 
 ### benchmark
 using
